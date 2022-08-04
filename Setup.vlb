@@ -1,7 +1,4 @@
-﻿[SpinEdit3]
-Coordinates=300,10,70,58
-
-[BitBtn1]
+﻿[BitBtn1]
 Coordinates=380,10,56,58
 
 [edtTeam1]
@@ -23,14 +20,8 @@ Coordinates=10,10,55,58
 [Label1]
 Coordinates=157,10,53,58
 
-[SpinEdit1]
-Coordinates=220,10,70,58
-
 [edtTeam3]
 Coordinates=75,10,72,58
-
-[SpinEdit2]
-Coordinates=268,78,70,58
 
 [Panel1]
 Coordinates=348,78,55,58
@@ -40,4 +31,13 @@ Coordinates=427,1,91,36
 
 [Label2]
 Coordinates=214,155,53,58
+
+[spnQ1]
+Coordinates=220,10,70,58
+
+[spnQ2]
+Coordinates=268,78,70,58
+
+[spnQ3]
+Coordinates=300,10,70,58
 

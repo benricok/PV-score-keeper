@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Samples.Spin, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.Buttons, Vcl.ExtCtrls, Scoring;
 
 type
   TfrmSetup = class(TForm)
@@ -18,10 +18,13 @@ type
     edtTeam3: TEdit;
     cbxT3: TCheckBox;
     Label1: TLabel;
-    SpinEdit1: TSpinEdit;
-    SpinEdit2: TSpinEdit;
-    SpinEdit3: TSpinEdit;
+    spnQ1: TSpinEdit;
+    spnQ2: TSpinEdit;
+    spnQ3: TSpinEdit;
     Label2: TLabel;
+    procedure btnContinueClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -34,5 +37,22 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmSetup.btnContinueClick(Sender: TObject);
+begin
+  frmScoring.Init(edtTeam1.Text, edtTeam2.Text, edtTeam3.Text, cbxT3.Checked);
+  frmSetup.Hide;
+  frmScoring.Show;
+end;
+
+procedure TfrmSetup.FormActivate(Sender: TObject);
+begin
+  frmScoring.Hide;
+end;
+
+procedure TfrmSetup.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Application.Terminate;
+end;
 
 end.

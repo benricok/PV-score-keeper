@@ -13,6 +13,8 @@ object frmSetup: TfrmSetup
   Font.Style = []
   OldCreateOrder = False
   Position = poMainFormCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -38,6 +40,7 @@ object frmSetup: TfrmSetup
       Default = True
       ModalResult = 1
       TabOrder = 0
+      OnClick = btnContinueClick
     end
     object BitBtn1: TBitBtn
       Left = 278
@@ -114,7 +117,7 @@ object frmSetup: TfrmSetup
     Caption = 'Enable team 3'
     TabOrder = 5
   end
-  object SpinEdit1: TSpinEdit
+  object spnQ1: TSpinEdit
     Left = 240
     Top = 48
     Width = 88
@@ -124,7 +127,7 @@ object frmSetup: TfrmSetup
     TabOrder = 6
     Value = 0
   end
-  object SpinEdit2: TSpinEdit
+  object spnQ2: TSpinEdit
     Left = 240
     Top = 76
     Width = 88
@@ -134,7 +137,7 @@ object frmSetup: TfrmSetup
     TabOrder = 7
     Value = 0
   end
-  object SpinEdit3: TSpinEdit
+  object spnQ3: TSpinEdit
     Left = 240
     Top = 104
     Width = 88
