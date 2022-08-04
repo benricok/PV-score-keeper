@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/08/04 18:40:21.979,=C:\Users\bkadmin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/04 18:53:11.143,C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Setup.dfm=C:\Users\bkadmin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/04 18:53:11.143,C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Setup.pas=C:\Users\bkadmin\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/04 18:53:29.311,C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\PVScoreKeeper.dproj=C:\Users\bkadmin\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/04 18:53:44.185,=C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Unit1.pas</Transaction>
+    <Transaction>2022/08/04 18:53:53.480,C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Scoring.dfm=C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Unit1.dfm</Transaction>
+    <Transaction>2022/08/04 18:53:53.480,C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Scoring.pas=C:\Users\bkadmin\Documents\GitHub\PV-score-keeper\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

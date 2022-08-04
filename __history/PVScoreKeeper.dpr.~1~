@@ -1,0 +1,14 @@
+program PVScoreKeeper;
+
+uses
+  Vcl.Forms,
+  Setup in 'Setup.pas' {frmSetup};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmSetup, frmSetup);
+  Application.Run;
+end.
