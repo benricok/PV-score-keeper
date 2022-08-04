@@ -25,7 +25,6 @@ object frmScoring: TfrmScoring
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 606
     DesignSize = (
       598
       37)
@@ -59,6 +58,7 @@ object frmScoring: TfrmScoring
       Kind = bkYes
       NumGlyphs = 2
       TabOrder = 2
+      OnClick = btnSaveClick
     end
   end
   object pnlT1: TPanel
@@ -92,6 +92,7 @@ object frmScoring: TfrmScoring
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      PlainText = True
       TabOrder = 0
       Zoom = 100
     end
@@ -163,6 +164,7 @@ object frmScoring: TfrmScoring
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      PlainText = True
       TabOrder = 0
       Zoom = 100
     end
@@ -234,6 +236,7 @@ object frmScoring: TfrmScoring
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      PlainText = True
       TabOrder = 0
       Zoom = 100
     end

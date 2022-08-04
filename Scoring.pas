@@ -54,6 +54,7 @@ type
     procedure btnT1A3Click(Sender: TObject);
     procedure btnT2A3Click(Sender: TObject);
     procedure btnT3A3Click(Sender: TObject);
+    procedure btnSaveClick(Sender: TObject);
   private
     Var
       T1,T2,T3 : string;
@@ -83,6 +84,74 @@ end;
 function TfrmScoring.btnCustom: integer;
 begin
   result := StrToInt(Inputbox('Custom', 'Enter custom amount to add to score', '0'));
+end;
+
+procedure TfrmScoring.btnSaveClick(Sender: TObject);
+var
+  saveDialog : TSaveDialog;
+  sl1, sl2, sl3, slOut : TStringList;
+  ms1, ms2, ms3 : TMemoryStream;
+  i : integer;
+begin
+  saveDialog := TSaveDialog.Create(self);
+
+  saveDialog.Title := 'Save scores';
+  saveDialog.InitialDir := GetCurrentDir;
+
+  // Allow only .txt and .doc file types to be saved
+  saveDialog.Filter := 'CSV file|*.csv';
+  saveDialog.DefaultExt := 'csv';
+
+  // Select text files as the starting filter type
+  saveDialog.FilterIndex := 1;
+
+  // Display the open file dialog
+  if saveDialog.Execute then begin
+
+    sl1 := TStringList.Create;
+    sl2 := TStringList.Create;
+    sl3 := TStringList.Create;
+    slOut := TStringList.Create;
+
+    ms1 := TMemoryStream.Create;
+    ms2 := TMemoryStream.Create;
+    ms3 := TMemoryStream.Create;
+
+    redT1.Lines.SaveToStream(ms1);
+    ms1.Position := 0;
+    sl1.LoadFromStream(ms1);
+
+    redT2.Lines.SaveToStream(ms2);
+    ms2.Position := 0;
+    sl2.LoadFromStream(ms2);
+
+    redT3.Lines.SaveToStream(ms3);
+    ms3.Position := 0;
+    sl3.LoadFromStream(ms3);
+
+    if bT3 then begin
+      slOut.Add(T1 + ',' + T2 + ',' + T3);
+      for i := 1 to sl1.Count-1 do
+        slOut.Add(sl1[i] + ',' + sl2[i] + ',' + sl3[i]);
+      slOut.Add(IntToStr(S1) + ',' + IntToStr(S2) + ',' + IntToStr(S3));
+    end else begin
+      slOut.Add(T1 + ',' + T2);
+      for i := 1 to sl1.Count-1 do
+        slOut.Add(sl1[i] + ',' + sl2[i]);
+      slOut.Add(IntToStr(S1) + ',' + IntToStr(S2));
+    end;
+    slOut.SaveToFile(saveDialog.FileName);
+
+  end;
+
+  saveDialog.Free;
+  frmScoring.Show;
+  sl1.Free;
+  sl2.Free;
+  sl3.Free;
+  ms1.Free;
+  ms2.Free;
+  ms3.Free;
 end;
 
 procedure TfrmScoring.btnT1A1Click(Sender: TObject);
