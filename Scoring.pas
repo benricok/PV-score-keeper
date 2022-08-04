@@ -62,7 +62,7 @@ type
       S1,S2,S3 : integer;
       bT3 : boolean;
   public
-    constructor Init(T1,T2,T3 : string; bT3 : boolean);
+    constructor Init(sT1,sT2,sT3 : string; biT3 : boolean);
   end;
 var
   frmScoring: TfrmScoring;
@@ -251,16 +251,15 @@ begin
     end;
 end;
 
-constructor TfrmScoring.Init(T1, T2, T3: string;
-  bT3: boolean);
+constructor TfrmScoring.Init(sT1, sT2, sT3: string; biT3: boolean);
 begin
-  T1 := T1;
-  T2 := T2;
-  T3 := T3;
+  T1 := sT1;
+  T2 := sT2;
+  T3 := sT3;
   A1 := frmSetup.spnQ1.Value;
   A2 := frmSetup.spnQ2.Value;
   A3 := frmSetup.spnQ3.Value;
-  bT3 := bT3;
+  bT3 := biT3;
 
   if bT3 then
     pnlT3.Show
